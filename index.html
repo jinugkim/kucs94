@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#8c2633">
-  <meta name="description" content="고려대 컴퓨터학과 94동기회 근조기 운영 및 지역별 배송 마감 안내">
+  <meta name="description" content="고려대 컴퓨터학과 94동기회 경조사 기금 및 근조기 운영 안내">
   <title>근조기 운영 안내 | 고려대 컴퓨터학과 94동기회</title>
   <style>
     :root {
@@ -87,6 +87,14 @@
     .delivery-time { margin-top: 9px; color: var(--crimson); font-size: 17px; font-weight: 800; letter-spacing: -.04em; }
     .delivery-detail { margin-top: 5px; color: var(--muted); font-size: 10px; line-height: 1.5; }
     .notice { margin-top: 10px; color: var(--muted); font-size: 11px; line-height: 1.7; word-break: keep-all; }
+    .fund-card { padding: 23px 25px; }
+    .fund-copy { margin: 9px 0 19px; color: var(--muted); font-size: 13px; line-height: 1.75; word-break: keep-all; }
+    .fund-details { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
+    .fund-detail { padding: 15px 0 0; }
+    .fund-detail:nth-child(2) { padding-left: 22px; border-left: 1px solid var(--line); }
+    .fund-label { color: var(--muted); font-size: 10px; font-weight: 650; }
+    .fund-value { margin-top: 5px; font-size: 14px; font-weight: 750; }
+    .fund-account { color: var(--crimson); font-size: 15px; letter-spacing: .01em; }
     .hours { display: grid; grid-template-columns: 1fr 1fr; }
     .hours-item { padding: 19px 22px; }
     .hours-item + .hours-item { border-left: 1px solid var(--line); }
@@ -130,6 +138,12 @@
       .delivery-item:nth-child(3) { border-top: 1px solid var(--line); border-left: 0; }
       .delivery-item:nth-child(4) { border-top: 1px solid var(--line); }
       .delivery-time { font-size: 16px; }
+      .fund-card { padding: 18px 17px; }
+      .fund-copy { margin-bottom: 15px; font-size: 12px; }
+      .fund-details { grid-template-columns: 1fr; }
+      .fund-detail:nth-child(2) { padding: 12px 0 0; border-top: 1px solid var(--line); border-left: 0; }
+      .fund-value { font-size: 13px; }
+      .fund-account { font-size: 14px; }
       .hours { grid-template-columns: 1fr; }
       .hours-item { padding: 15px 17px; }
       .hours-item + .hours-item { border-top: 1px solid var(--line); border-left: 0; }
@@ -161,6 +175,20 @@
   </section>
 
   <main class="wrap">
+    <section class="section" aria-labelledby="fund-title">
+      <div class="section-head">
+        <div><h2 id="fund-title">94 경조사 기금 재정 확충 안내</h2></div>
+      </div>
+      <div class="card fund-card">
+        <p class="fund-copy">우리 동기회의 경조사 기금 마련을 위한 ‘커피 한 잔 값 기부’에 동참해 주세요. 부담 없이 십시일반 마음을 모읍니다. 😊</p>
+        <div class="fund-details">
+          <div class="fund-detail"><div class="fund-label">기부 금액</div><div class="fund-value">10,000원 <span class="fund-label">(커피 한 잔 값)</span></div></div>
+          <div class="fund-detail"><div class="fund-label">진행 시기</div><div class="fund-value">추석 및 연말</div></div>
+          <div class="fund-detail"><div class="fund-label">입금 계좌</div><div class="fund-value fund-account">카카오뱅크 3333097614629</div><div class="fund-label">예금주 김진욱</div></div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="delivery">
       <div class="section-head">
         <div><h2>지역별 배송 마감 시간</h2></div>
