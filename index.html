@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#8c2633">
-  <meta name="description" content="고려대학교 컴퓨터학과 94동기회 근조기 및 경조사 지원 안내">
-  <title>근조기 및 경조사 지원 안내 | 고려대학교 컴퓨터학과 94동기회</title>
+  <meta name="description" content="고려대학교 컴퓨터학과 94동기회 근조기 운영 및 지역별 배송 마감 안내">
+  <title>근조기 운영 안내 | 고려대학교 컴퓨터학과 94동기회</title>
   <style>
     :root {
       color-scheme: light;
@@ -133,7 +133,7 @@
       .hours { grid-template-columns: 1fr; }
       .hours-item { padding: 15px 17px; }
       .hours-item + .hours-item { border-top: 1px solid var(--line); border-left: 0; }
-      .footer-inner { flex-direction: column; gap: 4px; padding-block: 16px; padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+      .footer-inner { flex-direction: column; gap: 4px; padding-block: 16px; }
       .mobile-actions { position: fixed; z-index: 5; right: 0; bottom: 0; left: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 9px 16px calc(9px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); background: rgba(255,255,255,.97); backdrop-filter: blur(10px); }
       .mobile-actions a { min-height: 43px; display: grid; place-items: center; font-size: 12px; font-weight: 750; }
       .mobile-sms { background: var(--crimson); color: white; }
@@ -150,78 +150,25 @@
         <span class="identity-name">고려대학교 컴퓨터학과<span>94동기회</span></span>
       </a>
       <nav class="nav" aria-label="주요 메뉴">
-        <a href="#memorial">근조기 안내</a>
         <a href="#delivery">배송 안내</a>
-        <a href="#contact">문의 안내</a>
+        <a href="#top">처음으로</a>
       </nav>
-      <a class="top-contact" href="sms:01095700031">문자 접수</a>
+      <a class="top-contact" href="#delivery">배송 마감 안내</a>
     </div>
   </header>
 
   <section class="hero" id="top">
     <div class="wrap hero-inner">
       <p class="eyebrow">KOREA UNIVERSITY · COMPUTER SCIENCE · CLASS OF 1994</p>
-      <h1>근조기 및 경조사<br>지원 안내</h1>
-      <p class="hero-copy">고려대학교 컴퓨터학과 94동기회는 동기 여러분의 마음을 정성껏 전할 수 있도록 근조기 운영을 지원합니다. 지오스테이션과 연계해 접수와 배송을 안내합니다.</p>
-      <div class="hero-meta"><span>문자 접수 24시간</span><span>상담 응대 08:00–19:00</span></div>
-      <div class="hero-actions">
-        <a class="button button-primary" href="sms:01095700031">문자로 접수하기</a>
-        <a class="button button-outline" href="#memorial">안내 내용 보기</a>
-      </div>
+      <h1>고려대학교 컴퓨터학과<br>94동기회 근조기 운영</h1>
+      <p class="hero-copy">동기회에서 직접 운영하는 근조기 안내입니다. 배송을 준비하실 때 아래 지역별 마감 시간을 참고해 주세요.</p>
     </div>
   </section>
 
   <main class="wrap">
-    <section class="contact-strip" id="contact" aria-label="접수 및 문의 연락처">
-      <div class="contact-item">
-        <span class="label">문자 접수 전용 · 24시간 접수</span>
-        <a class="contact-number" href="sms:01095700031">010-9570-0031</a>
-        <p class="contact-note">상담 응대 시간은 08:00–19:00입니다.</p>
-      </div>
-      <div class="contact-item">
-        <span class="label">전화 문의</span>
-        <a class="contact-number" href="tel:025811905">02-581-1905</a>
-        <p class="contact-note">전화 상담 가능 시간: 08:00–19:00</p>
-      </div>
-    </section>
-
-    <section class="section" id="memorial">
-      <div class="section-head">
-        <div><p class="section-kicker">MEMORIAL SERVICE</p><h2>상품 및 할인가 안내</h2></div>
-        <p class="section-note">근조기 운영 · 화환류</p>
-      </div>
-      <div class="card products">
-        <div class="product">
-          <p class="product-title">3단 화환</p>
-          <div class="product-price"><span class="old-price">100,000원</span>80,000원<span class="discount">20% 할인</span></div>
-          <p class="subnote">동기회 할인가</p>
-        </div>
-        <div class="product">
-          <p class="product-title">근조바구니</p>
-          <div class="product-price">60,000원</div>
-          <p class="subnote">상품 금액</p>
-        </div>
-      </div>
-
-      <div class="section-head" style="margin-top:28px">
-        <div><p class="section-kicker">DELIVERY FEE</p><h3>근조기 지역별 배송비</h3></div>
-        <p class="section-note">VAT 별도</p>
-      </div>
-      <div class="card fees" role="table" aria-label="지역별 근조기 배송비">
-        <div class="fee-row fee-head" role="row"><span role="columnheader">배송 지역</span><span role="columnheader">조기</span><span role="columnheader">축기</span></div>
-        <div class="fee-row" role="row"><span class="fee-region" role="cell">in서울</span><span role="cell">30,000원</span><span role="cell">35,000원</span></div>
-        <div class="fee-row" role="row"><span class="fee-region" role="cell">서울근교</span><span role="cell">35,000원</span><span role="cell">43,000원</span></div>
-        <div class="fee-row" role="row"><span class="fee-region" role="cell">수도권</span><span role="cell">43,000원</span><span role="cell">47,000원</span></div>
-        <div class="fee-row" role="row"><span class="fee-region" role="cell">경기외곽</span><span role="cell">47,000원</span><span role="cell">47,000원</span></div>
-        <div class="fee-row" role="row"><span class="fee-region" role="cell">지방</span><span role="cell">53,000원</span><span role="cell">53,000원</span></div>
-        <div class="fee-row" role="row"><span class="fee-region" role="cell">제주</span><span role="cell" style="grid-column:span 2">실비</span></div>
-      </div>
-      <p class="fees-foot">배송비는 부가세 별도이며, 제주 지역은 실비로 안내합니다.</p>
-    </section>
-
     <section class="section" id="delivery">
       <div class="section-head">
-        <div><p class="section-kicker">DELIVERY HOURS</p><h2>배송 마감 및 도착 시간</h2></div>
+        <div><p class="section-kicker">DELIVERY REFERENCE</p><h2>지역별 배송 마감 시간</h2></div>
       </div>
       <div class="card delivery">
         <div class="delivery-item"><div class="delivery-area">서울</div><div class="delivery-time">19시 마감</div><div class="delivery-detail">접수 후 3시간 내</div></div>
@@ -229,25 +176,12 @@
         <div class="delivery-item"><div class="delivery-area">경기외곽</div><div class="delivery-time">16시 마감</div></div>
         <div class="delivery-item"><div class="delivery-area">지방</div><div class="delivery-time">20시 도착 기준</div></div>
       </div>
-      <p class="notice">배송 가능 여부와 도착 시간은 지역 및 현장 상황에 따라 달라질 수 있습니다. 접수할 때 배송 주소와 희망 도착 시간을 알려주세요.</p>
-    </section>
-
-    <section class="section">
-      <div class="section-head"><div><p class="section-kicker">SERVICE HOURS</p><h2>접수 및 응대 시간</h2></div></div>
-      <div class="card hours">
-        <div class="hours-item"><span class="label">문자 접수</span><div class="hours-main">24시간 접수 가능</div><p class="hours-sub">접수 문자는 언제든 보내실 수 있으며, 상담 응대는 08:00–19:00입니다.</p></div>
-        <div class="hours-item"><span class="label">전화 문의</span><div class="hours-main">02-581-1905</div><p class="hours-sub">문의 및 상담 시간: 08:00–19:00</p></div>
-      </div>
-      <p class="notice">평일·공휴일의 별도 응대 일정은 접수 시 문자로 확인해 주세요.</p>
+      <p class="notice">배송 준비를 위한 참고 시간입니다. 배송 지역과 현장 상황에 따라 도착 시간이 달라질 수 있습니다.</p>
     </section>
   </main>
 
   <footer>
-    <div class="wrap footer-inner"><span class="footer-name">고려대학교 컴퓨터학과 94동기회</span><span>근조기 운영 안내 · 지오스테이션 연계</span><a class="text-link" href="#top">맨 위로 ↑</a></div>
+    <div class="wrap footer-inner"><span class="footer-name">고려대학교 컴퓨터학과 94동기회</span><span>근조기 운영 안내</span><a class="text-link" href="#top">맨 위로 ↑</a></div>
   </footer>
-  <div class="mobile-actions" aria-label="빠른 연락">
-    <a class="mobile-sms" href="sms:01095700031">문자 접수</a>
-    <a class="mobile-call" href="tel:025811905">전화 문의</a>
-  </div>
 </body>
 </html>
