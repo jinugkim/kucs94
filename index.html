@@ -32,7 +32,7 @@
     .topbar-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
     .identity { display: flex; align-items: center; gap: 12px; min-width: 0; }
     .seal { width: 36px; height: 36px; display: grid; place-items: center; flex: 0 0 auto; border: 1px solid var(--crimson); color: var(--crimson); font-family: Georgia, serif; font-size: 15px; font-weight: 700; letter-spacing: -1px; }
-    .identity-name { font-size: 13px; font-weight: 750; line-height: 1.4; letter-spacing: -.025em; }
+    .identity-name { font-size: 13px; font-weight: 750; line-height: 1.4; letter-spacing: -.025em; white-space: nowrap; }
     .identity-name span { display: block; color: var(--muted); font-size: 11px; font-weight: 500; }
     .nav { display: flex; align-items: center; gap: 24px; color: #57514e; font-size: 12px; font-weight: 650; }
     .nav a:hover, .text-link:hover { color: var(--crimson); }
@@ -147,7 +147,7 @@
     <div class="wrap topbar-inner">
       <a class="identity" href="#top" aria-label="페이지 처음으로">
         <span class="seal" aria-hidden="true">KU</span>
-        <span class="identity-name">고려대학교 컴퓨터학과<span>94동기회</span></span>
+        <span class="identity-name">고려대 컴퓨터학과<span>94동기회</span></span>
       </a>
       <nav class="nav" aria-label="주요 메뉴">
         <a href="#delivery">배송 안내</a>
@@ -161,7 +161,7 @@
     <div class="wrap hero-inner">
       <p class="eyebrow">KOREA UNIVERSITY · COMPUTER SCIENCE · CLASS OF 1994</p>
       <h1>고려대학교 컴퓨터학과<br>94동기회 근조기 운영</h1>
-      <p class="hero-copy">동기회에서 직접 운영하는 근조기 안내입니다. 배송을 준비하실 때 아래 지역별 마감 시간을 참고해 주세요.</p>
+      <p class="hero-copy">동기회에서 직접 운영하는 근조기 안내입니다.</p>
     </div>
   </section>
 
