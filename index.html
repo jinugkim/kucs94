@@ -95,6 +95,11 @@
     .fund-label { color: var(--muted); font-size: 10px; font-weight: 650; }
     .fund-value { margin-top: 5px; font-size: 14px; font-weight: 750; }
     .fund-account { color: var(--crimson); font-size: 15px; letter-spacing: .01em; }
+    .fund-account-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+    .fund-account-row .fund-account { margin: 5px 0 0; }
+    .copy-button { min-height: 36px; margin-top: 5px; padding: 0 11px; border: 1px solid var(--line); background: white; color: var(--crimson); font: inherit; font-size: 11px; font-weight: 750; cursor: pointer; }
+    .copy-button:hover, .copy-button:focus-visible { border-color: var(--crimson); background: var(--soft-red); }
+    .copy-status { min-height: 1.5em; margin: 6px 0 0; color: var(--muted); font-size: 11px; }
     .hours { display: grid; grid-template-columns: 1fr 1fr; }
     .hours-item { padding: 19px 22px; }
     .hours-item + .hours-item { border-left: 1px solid var(--line); }
@@ -184,7 +189,7 @@
         <div class="fund-details">
           <div class="fund-detail"><div class="fund-label">기부 금액</div><div class="fund-value">10,000원 <span class="fund-label">(커피 한 잔 값)</span></div></div>
           <div class="fund-detail"><div class="fund-label">진행 시기</div><div class="fund-value">추석 및 연말</div></div>
-          <div class="fund-detail"><div class="fund-label">입금 계좌</div><div class="fund-value fund-account">카카오뱅크 3333097614629</div><div class="fund-label">예금주 김진욱</div></div>
+          <div class="fund-detail"><div class="fund-label">입금 계좌</div><div class="fund-account-row"><div class="fund-value fund-account">카카오뱅크 3333097614629</div><button class="copy-button" type="button" data-copy="3333097614629">계좌번호 복사</button></div><div class="fund-label">예금주 김진욱</div><p class="copy-status" role="status" aria-live="polite"></p></div>
         </div>
       </div>
     </section>
@@ -206,5 +211,32 @@
   <footer>
     <div class="wrap footer-inner"><span class="footer-name">고려대 컴퓨터학과 94동기회</span><span>근조기 운영 안내</span><a class="text-link" href="#top">맨 위로 ↑</a></div>
   </footer>
+  <script>
+    document.querySelectorAll("[data-copy]").forEach((button) => {
+      button.addEventListener("click", async () => {
+        const account = button.dataset.copy;
+        const status = button.parentElement.parentElement.querySelector(".copy-status");
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(account);
+          } else {
+            const field = document.createElement("textarea");
+            field.value = account;
+            field.setAttribute("readonly", "");
+            field.style.position = "fixed";
+            field.style.opacity = "0";
+            document.body.appendChild(field);
+            field.select();
+            const copied = document.execCommand("copy");
+            field.remove();
+            if (!copied) throw new Error("Copy failed");
+          }
+          status.textContent = "계좌번호를 복사했습니다.";
+        } catch {
+          status.textContent = "복사하지 못했습니다. 계좌번호를 직접 선택해 주세요.";
+        }
+      });
+    });
+  </script>
 </body>
 </html>
