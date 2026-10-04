@@ -29,7 +29,7 @@
     a { color: inherit; text-decoration: none; }
     .wrap { width: min(100% - 40px, 960px); margin-inline: auto; }
     .topbar { height: 66px; background: var(--paper); border-bottom: 1px solid var(--line); }
-    .topbar-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .topbar-inner { height: 100%; display: flex; align-items: center; justify-content: flex-start; gap: 20px; }
     .identity { display: flex; align-items: center; gap: 12px; min-width: 0; }
     .seal { width: 36px; height: 36px; display: grid; place-items: center; flex: 0 0 auto; border: 1px solid var(--crimson); color: var(--crimson); font-family: Georgia, serif; font-size: 15px; font-weight: 700; letter-spacing: -1px; }
     .identity-name { font-size: 13px; font-weight: 750; line-height: 1.4; letter-spacing: -.025em; white-space: nowrap; }
@@ -149,11 +149,6 @@
         <span class="seal" aria-hidden="true">KU</span>
         <span class="identity-name">고려대 컴퓨터학과<span>94동기회</span></span>
       </a>
-      <nav class="nav" aria-label="주요 메뉴">
-        <a href="#delivery">배송 안내</a>
-        <a href="#top">처음으로</a>
-      </nav>
-      <a class="top-contact" href="#delivery">배송 마감 안내</a>
     </div>
   </header>
 
