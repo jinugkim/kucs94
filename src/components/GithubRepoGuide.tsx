@@ -172,24 +172,6 @@ export const GithubRepoGuide: React.FC = () => {
           <span>SSH 명령어 복사</span>
         </button>
       </div>
-              href="https://github.com/new"
-              target="_blank"
-              rel="noreferrer"
-              className="text-[11px] text-neutral-600 hover:text-neutral-900 underline flex items-center gap-1"
-            >
-              <span>GitHub에서 새 저장소 만들기</span>
-              <ExternalLink className="w-3 h-3" />
-            </a>
-            <button
-              onClick={() => copyToClipboard(gitCommands, 2)}
-              className="px-3 py-1.5 text-xs font-semibold rounded-lg bg-neutral-900 text-white hover:bg-neutral-800 transition-colors flex items-center gap-1.5 cursor-pointer"
-            >
-              {copiedIndex === 2 ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-              <span>{copiedIndex === 2 ? '복사됨' : '명령어 복사'}</span>
-            </button>
-          </div>
-        </div>
-      </div>
 
       {/* Codebase Structure Info */}
       <div className="p-6 bg-neutral-50 rounded-2xl border border-neutral-200">
