@@ -2,144 +2,252 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#862633">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#8c2633">
   <meta name="description" content="고려대학교 컴퓨터학과 94동기회 근조기 및 경조사 지원 안내">
-  <title>고려대학교 컴퓨터학과 94동기회 | 근조기 및 경조사 지원 안내</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: { extend: {
-        colors: { crimson: { DEFAULT: '#862633', dark: '#641b26', pale: '#f8edef' } },
-        fontFamily: { sans: ['Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', 'sans-serif'] },
-        boxShadow: { soft: '0 16px 50px rgba(55, 26, 29, .08)' }
-      }}
-    }
-  </script>
+  <title>근조기 및 경조사 지원 안내 | 고려대학교 컴퓨터학과 94동기회</title>
   <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
-    .hero-pattern { background-image: radial-gradient(circle at 85% 18%, rgba(255,255,255,.12) 0 1px, transparent 2px), radial-gradient(circle at 80% 20%, transparent 0 115px, rgba(255,255,255,.08) 116px 117px, transparent 118px); background-size: 24px 24px, auto; }
+    :root {
+      color-scheme: light;
+      --crimson: #8c2633;
+      --crimson-dark: #681c27;
+      --ink: #262321;
+      --muted: #746f6c;
+      --line: #e8e4e1;
+      --paper: #fff;
+      --canvas: #f7f6f4;
+      --soft-red: #f8eff0;
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+    body { margin: 0; padding-bottom: env(safe-area-inset-bottom); background: var(--canvas); color: var(--ink); }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(100% - 40px, 960px); margin-inline: auto; }
+    .topbar { height: 66px; background: var(--paper); border-bottom: 1px solid var(--line); }
+    .topbar-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .identity { display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .seal { width: 36px; height: 36px; display: grid; place-items: center; flex: 0 0 auto; border: 1px solid var(--crimson); color: var(--crimson); font-family: Georgia, serif; font-size: 15px; font-weight: 700; letter-spacing: -1px; }
+    .identity-name { font-size: 13px; font-weight: 750; line-height: 1.4; letter-spacing: -.025em; }
+    .identity-name span { display: block; color: var(--muted); font-size: 11px; font-weight: 500; }
+    .nav { display: flex; align-items: center; gap: 24px; color: #57514e; font-size: 12px; font-weight: 650; }
+    .nav a:hover, .text-link:hover { color: var(--crimson); }
+    .top-contact { padding: 10px 14px; border: 1px solid var(--crimson); color: var(--crimson); font-size: 12px; font-weight: 750; transition: background .15s, color .15s; }
+    .top-contact:hover { background: var(--crimson); color: white; }
+    .hero { background: var(--crimson); color: white; }
+    .hero-inner { padding-block: 54px 50px; }
+    .eyebrow { margin: 0 0 14px; color: rgba(255,255,255,.74); font-size: 11px; font-weight: 700; letter-spacing: .14em; }
+    h1 { max-width: 660px; margin: 0; font-family: Georgia, "Nanum Myeongjo", "Batang", serif; font-size: clamp(30px, 5.3vw, 48px); font-weight: 600; letter-spacing: -.055em; line-height: 1.35; }
+    .hero-copy { max-width: 540px; margin: 16px 0 0; color: rgba(255,255,255,.84); font-size: 14px; line-height: 1.8; word-break: keep-all; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 9px 22px; margin-top: 25px; color: rgba(255,255,255,.9); font-size: 12px; font-weight: 600; }
+    .hero-meta span::before { content: "·"; margin-right: 8px; color: #e7c5a8; }
+    .hero-actions { display: flex; gap: 10px; margin-top: 27px; }
+    .button { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 0 18px; border: 1px solid rgba(255,255,255,.75); font-size: 13px; font-weight: 750; transition: .15s; }
+    .button-primary { background: white; border-color: white; color: var(--crimson); }
+    .button-primary:hover { background: var(--soft-red); }
+    .button-outline { color: white; }
+    .button-outline:hover { background: rgba(255,255,255,.1); }
+    main { padding-block: 38px 54px; }
+    .contact-strip { display: grid; grid-template-columns: 1fr 1fr; margin-top: -1px; background: white; border: 1px solid var(--line); }
+    .contact-item { min-width: 0; padding: 21px 24px; }
+    .contact-item + .contact-item { border-left: 1px solid var(--line); }
+    .label { display: block; color: var(--muted); font-size: 11px; font-weight: 650; }
+    .contact-number { display: inline-block; margin-top: 6px; color: var(--crimson); font-size: 20px; font-weight: 800; letter-spacing: -.02em; }
+    .contact-note { margin: 5px 0 0; color: var(--muted); font-size: 11px; line-height: 1.6; }
+    .section { margin-top: 46px; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 12px; margin-bottom: 15px; }
+    .section-kicker { margin: 0 0 6px; color: var(--crimson); font-size: 10px; font-weight: 800; letter-spacing: .14em; }
+    h2 { margin: 0; font-family: Georgia, "Nanum Myeongjo", "Batang", serif; font-size: 25px; font-weight: 700; letter-spacing: -.045em; }
+    h3 { margin: 0; font-size: 14px; font-weight: 750; }
+    .section-note { margin: 0; color: var(--muted); font-size: 11px; }
+    .card { background: white; border: 1px solid var(--line); }
+    .products { display: grid; grid-template-columns: 1fr 1fr; }
+    .product { padding: 21px 23px; }
+    .product + .product { border-left: 1px solid var(--line); }
+    .product-title { color: var(--muted); font-size: 11px; }
+    .product-price { margin-top: 8px; font-size: 21px; font-weight: 800; letter-spacing: -.04em; }
+    .old-price { margin-right: 6px; color: #9b9591; font-size: 13px; font-weight: 500; text-decoration: line-through; }
+    .discount { display: inline-block; margin-left: 6px; padding: 3px 6px; background: var(--soft-red); color: var(--crimson); font-size: 10px; font-weight: 750; vertical-align: 3px; }
+    .subnote { margin: 8px 0 0; color: var(--muted); font-size: 11px; }
+    .fees { overflow: hidden; }
+    .fee-row { display: grid; grid-template-columns: 1.25fr 1fr 1fr; align-items: center; min-height: 47px; padding-inline: 19px; border-top: 1px solid var(--line); font-size: 12px; }
+    .fee-row:first-child { border-top: 0; }
+    .fee-head { min-height: 40px; background: #f8f7f6; color: var(--muted); font-size: 10px; font-weight: 700; }
+    .fee-row > :nth-child(n+2) { text-align: right; }
+    .fee-region { font-weight: 700; }
+    .fees-foot { margin: 10px 0 0; color: var(--muted); font-size: 11px; line-height: 1.6; }
+    .delivery { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .delivery-item { min-height: 100px; padding: 17px 18px; }
+    .delivery-item + .delivery-item { border-left: 1px solid var(--line); }
+    .delivery-area { color: var(--muted); font-size: 11px; font-weight: 650; }
+    .delivery-time { margin-top: 9px; color: var(--crimson); font-size: 17px; font-weight: 800; letter-spacing: -.04em; }
+    .delivery-detail { margin-top: 5px; color: var(--muted); font-size: 10px; line-height: 1.5; }
+    .notice { margin-top: 10px; color: var(--muted); font-size: 11px; line-height: 1.7; word-break: keep-all; }
+    .hours { display: grid; grid-template-columns: 1fr 1fr; }
+    .hours-item { padding: 19px 22px; }
+    .hours-item + .hours-item { border-left: 1px solid var(--line); }
+    .hours-main { margin-top: 7px; font-size: 15px; font-weight: 750; }
+    .hours-sub { margin: 5px 0 0; color: var(--muted); font-size: 11px; line-height: 1.6; }
+    footer { border-top: 1px solid var(--line); background: white; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 12px; padding-block: 21px; color: var(--muted); font-size: 10px; line-height: 1.6; }
+    .footer-name { color: #4c4744; font-weight: 700; }
+    .mobile-actions { display: none; }
+    @media (max-width: 680px) {
+      .wrap { width: min(100% - 32px, 520px); }
+      .topbar { height: 58px; }
+      .seal { width: 32px; height: 32px; font-size: 13px; }
+      .identity { gap: 9px; }
+      .identity-name { font-size: 12px; }
+      .nav { display: none; }
+      .top-contact { padding: 9px 11px; font-size: 11px; }
+      .hero-inner { padding-block: 37px 34px; }
+      .eyebrow { margin-bottom: 10px; font-size: 9px; }
+      h1 { font-size: clamp(29px, 8vw, 38px); line-height: 1.35; }
+      .hero-copy { margin-top: 12px; font-size: 13px; line-height: 1.75; }
+      .hero-meta { gap: 6px 14px; margin-top: 17px; font-size: 10px; }
+      .hero-actions { margin-top: 20px; }
+      .button { min-height: 42px; padding-inline: 14px; font-size: 12px; }
+      main { padding-block: 22px 35px; }
+      .contact-strip { grid-template-columns: 1fr; }
+      .contact-item { padding: 15px 17px; }
+      .contact-item + .contact-item { border-top: 1px solid var(--line); border-left: 0; }
+      .contact-number { font-size: 19px; }
+      .section { margin-top: 33px; }
+      .section-head { align-items: start; flex-direction: column; gap: 5px; margin-bottom: 12px; }
+      h2 { font-size: 22px; }
+      .products { grid-template-columns: 1fr; }
+      .product { padding: 16px 17px; }
+      .product + .product { border-top: 1px solid var(--line); border-left: 0; }
+      .product-price { font-size: 20px; }
+      .fee-row { grid-template-columns: 1.05fr 1fr 1fr; min-height: 43px; padding-inline: 12px; font-size: 11px; }
+      .fee-head { font-size: 9px; }
+      .delivery { grid-template-columns: 1fr 1fr; }
+      .delivery-item { min-height: 88px; padding: 14px; }
+      .delivery-item:nth-child(3) { border-top: 1px solid var(--line); border-left: 0; }
+      .delivery-item:nth-child(4) { border-top: 1px solid var(--line); }
+      .delivery-time { font-size: 16px; }
+      .hours { grid-template-columns: 1fr; }
+      .hours-item { padding: 15px 17px; }
+      .hours-item + .hours-item { border-top: 1px solid var(--line); border-left: 0; }
+      .footer-inner { flex-direction: column; gap: 4px; padding-block: 16px; padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+      .mobile-actions { position: fixed; z-index: 5; right: 0; bottom: 0; left: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 9px 16px calc(9px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); background: rgba(255,255,255,.97); backdrop-filter: blur(10px); }
+      .mobile-actions a { min-height: 43px; display: grid; place-items: center; font-size: 12px; font-weight: 750; }
+      .mobile-sms { background: var(--crimson); color: white; }
+      .mobile-call { border: 1px solid var(--line); color: var(--crimson); }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
   </style>
 </head>
-<body class="bg-[#fbf9f7] text-stone-800 antialiased">
-  <header class="sticky top-0 z-40 border-b border-stone-200/80 bg-white/95 backdrop-blur">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3.5 lg:px-8">
-      <a href="#top" class="flex items-center gap-3" aria-label="페이지 처음으로">
-        <span class="grid h-10 w-10 place-items-center rounded-xl bg-crimson text-sm font-black tracking-tight text-white">KU</span>
-        <span class="text-sm font-bold leading-tight text-stone-800">고려대학교 컴퓨터학과<br><span class="text-xs font-medium text-stone-500">94동기회</span></span>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="identity" href="#top" aria-label="페이지 처음으로">
+        <span class="seal" aria-hidden="true">KU</span>
+        <span class="identity-name">고려대학교 컴퓨터학과<span>94동기회</span></span>
       </a>
-      <nav class="hidden items-center gap-7 text-sm font-semibold text-stone-600 md:flex">
-        <a class="transition hover:text-crimson" href="#memorial">근조기 안내</a>
-        <a class="transition hover:text-crimson" href="#delivery">배송 안내</a>
-        <a class="transition hover:text-crimson" href="#contact">문의 및 접수</a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="#memorial">근조기 안내</a>
+        <a href="#delivery">배송 안내</a>
+        <a href="#contact">문의 안내</a>
       </nav>
-      <a href="sms:01095700031" class="rounded-full bg-crimson px-4 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-crimson-dark sm:text-sm">문자로 접수하기</a>
+      <a class="top-contact" href="sms:01095700031">문자 접수</a>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero-pattern overflow-hidden bg-crimson text-white">
-      <div class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 sm:py-20 lg:grid-cols-[1.15fr_.85fr] lg:px-8 lg:py-24">
-        <div class="relative z-10">
-          <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3.5 py-2 text-xs font-semibold tracking-wide text-white/90"><span class="h-1.5 w-1.5 rounded-full bg-amber-300"></span>KU COMPUTER SCIENCE · CLASS OF 1994</p>
-          <h1 class="max-w-2xl text-3xl font-black leading-[1.28] tracking-tight sm:text-4xl lg:text-[3.25rem]">고려대학교 컴퓨터학과<br>94동기회 근조기 운영 안내</h1>
-          <p class="mt-5 max-w-xl text-sm leading-7 text-white/80 sm:text-base">동기 여러분의 마음이 잘 전해질 수 있도록 근조기와 경조사 지원을 안내합니다.<br class="hidden sm:block"> 지오스테이션과 연계해 접수와 배송을 도와드립니다.</p>
-          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href="sms:01095700031" class="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-3.5 text-sm font-extrabold text-crimson shadow-lg transition hover:bg-rose-50">문자 접수 <span aria-hidden="true">→</span></a>
-            <a href="#memorial" class="inline-flex items-center justify-center rounded-xl border border-white/30 px-5 py-3.5 text-sm font-bold text-white transition hover:bg-white/10">운영 내용 보기</a>
-          </div>
-          <p class="mt-4 text-xs text-white/70">문자 접수 24시간 · 상담 응대 08:00–19:00</p>
-        </div>
-        <div class="relative mx-auto w-full max-w-md lg:ml-auto">
-          <div class="absolute -inset-4 rounded-[2rem] border border-white/10"></div>
-          <div class="relative rounded-[1.6rem] border border-white/15 bg-white/10 p-6 shadow-2xl backdrop-blur-sm sm:p-8">
-            <div class="flex items-start justify-between">
-              <div><p class="text-xs font-bold tracking-[.18em] text-white/65">QUICK CONTACT</p><h2 class="mt-2 text-xl font-extrabold">빠른 접수·문의</h2></div>
-              <span class="grid h-11 w-11 place-items-center rounded-2xl bg-white/15 text-xl" aria-hidden="true">✉</span>
-            </div>
-            <div class="mt-7 space-y-3">
-              <a href="sms:01095700031" class="group flex items-center justify-between rounded-xl bg-white p-4 text-stone-800 transition hover:-translate-y-0.5">
-                <span><span class="block text-xs font-semibold text-stone-500">문자 접수 전용 · 24시간</span><span class="mt-1 block text-lg font-extrabold tracking-wide">010-9570-0031</span></span><span class="grid h-10 w-10 place-items-center rounded-full bg-crimson-pale text-crimson transition group-hover:bg-crimson group-hover:text-white" aria-hidden="true">↗</span>
-              </a>
-              <a href="tel:025811905" class="group flex items-center justify-between rounded-xl border border-white/20 bg-white/5 p-4 transition hover:bg-white/10">
-                <span><span class="block text-xs font-semibold text-white/65">전화 문의</span><span class="mt-1 block text-lg font-extrabold tracking-wide">02-581-1905</span></span><span class="grid h-10 w-10 place-items-center rounded-full bg-white/10 text-white" aria-hidden="true">☎</span>
-              </a>
-            </div>
-            <p class="mt-4 text-xs leading-5 text-white/65">문자는 언제든 접수할 수 있으며, 상담 응대는 오전 8시부터 오후 7시까지입니다.</p>
-          </div>
-        </div>
+  <section class="hero" id="top">
+    <div class="wrap hero-inner">
+      <p class="eyebrow">KOREA UNIVERSITY · COMPUTER SCIENCE · CLASS OF 1994</p>
+      <h1>근조기 및 경조사<br>지원 안내</h1>
+      <p class="hero-copy">고려대학교 컴퓨터학과 94동기회는 동기 여러분의 마음을 정성껏 전할 수 있도록 근조기 운영을 지원합니다. 지오스테이션과 연계해 접수와 배송을 안내합니다.</p>
+      <div class="hero-meta"><span>문자 접수 24시간</span><span>상담 응대 08:00–19:00</span></div>
+      <div class="hero-actions">
+        <a class="button button-primary" href="sms:01095700031">문자로 접수하기</a>
+        <a class="button button-outline" href="#memorial">안내 내용 보기</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <section class="contact-strip" id="contact" aria-label="접수 및 문의 연락처">
+      <div class="contact-item">
+        <span class="label">문자 접수 전용 · 24시간 접수</span>
+        <a class="contact-number" href="sms:01095700031">010-9570-0031</a>
+        <p class="contact-note">상담 응대 시간은 08:00–19:00입니다.</p>
+      </div>
+      <div class="contact-item">
+        <span class="label">전화 문의</span>
+        <a class="contact-number" href="tel:025811905">02-581-1905</a>
+        <p class="contact-note">전화 상담 가능 시간: 08:00–19:00</p>
       </div>
     </section>
 
-    <section class="mx-auto max-w-6xl px-5 py-12 lg:px-8 lg:py-16" id="memorial">
-      <div class="mb-7 flex flex-wrap items-end justify-between gap-3">
-        <div><p class="text-xs font-extrabold tracking-[.16em] text-crimson">MEMORIAL SERVICE</p><h2 class="mt-2 text-2xl font-black tracking-tight sm:text-3xl">근조기 및 상품 안내</h2></div>
-        <p class="text-xs text-stone-500">동기회 제휴 안내 기준</p>
+    <section class="section" id="memorial">
+      <div class="section-head">
+        <div><p class="section-kicker">MEMORIAL SERVICE</p><h2>상품 및 할인가 안내</h2></div>
+        <p class="section-note">근조기 운영 · 화환류</p>
       </div>
-      <div class="grid gap-5 md:grid-cols-2">
-        <article class="rounded-2xl border border-stone-200 bg-white p-6 shadow-soft sm:p-7">
-          <div class="flex items-center gap-3"><span class="grid h-11 w-11 place-items-center rounded-xl bg-crimson-pale text-xl text-crimson" aria-hidden="true">✿</span><div><h3 class="font-extrabold">화환류</h3><p class="mt-0.5 text-xs text-stone-500">정성을 담아 전달하는 마음</p></div></div>
-          <div class="mt-6 divide-y divide-stone-100">
-            <div class="flex items-center justify-between py-4"><div><p class="font-bold">3단 화환</p><p class="mt-1 text-xs text-stone-500">동기회 할인가</p></div><div class="text-right"><span class="mr-2 text-sm text-stone-400 line-through">100,000원</span><span class="font-extrabold text-crimson">80,000원</span><span class="ml-1 rounded bg-crimson-pale px-1.5 py-1 text-[10px] font-bold text-crimson">20% 할인</span></div></div>
-            <div class="flex items-center justify-between py-4"><div><p class="font-bold">근조바구니</p><p class="mt-1 text-xs text-stone-500">상품 금액</p></div><span class="font-extrabold">60,000원</span></div>
-          </div>
-          <p class="mt-3 rounded-lg bg-stone-50 px-3.5 py-3 text-xs leading-5 text-stone-500">배송비는 지역과 상품 종류에 따라 별도 부과되며, 아래 표를 확인해 주세요.</p>
-        </article>
-        <article class="rounded-2xl border border-stone-200 bg-white p-6 shadow-soft sm:p-7">
-          <div class="flex items-center gap-3"><span class="grid h-11 w-11 place-items-center rounded-xl bg-amber-50 text-xl text-amber-700" aria-hidden="true">▤</span><div><h3 class="font-extrabold">근조기 배송 안내</h3><p class="mt-0.5 text-xs text-stone-500">지역별 배송비 · VAT 별도</p></div></div>
-          <div class="mt-5 overflow-hidden rounded-xl border border-stone-200">
-            <table class="w-full text-left text-xs sm:text-sm">
-              <thead class="bg-stone-50 text-[11px] font-bold text-stone-500 sm:text-xs"><tr><th class="px-3.5 py-3 sm:px-4">배송 지역</th><th class="px-2 py-3 text-right sm:px-4">조기</th><th class="px-3.5 py-3 text-right sm:px-4">축기</th></tr></thead>
-              <tbody class="divide-y divide-stone-100">
-                <tr><th scope="row" class="px-3.5 py-3 font-semibold sm:px-4">in서울</th><td class="px-2 py-3 text-right">30,000원</td><td class="px-3.5 py-3 text-right">35,000원</td></tr>
-                <tr><th scope="row" class="px-3.5 py-3 font-semibold sm:px-4">서울근교</th><td class="px-2 py-3 text-right">35,000원</td><td class="px-3.5 py-3 text-right">43,000원</td></tr>
-                <tr><th scope="row" class="px-3.5 py-3 font-semibold sm:px-4">수도권</th><td class="px-2 py-3 text-right">43,000원</td><td class="px-3.5 py-3 text-right">47,000원</td></tr>
-                <tr><th scope="row" class="px-3.5 py-3 font-semibold sm:px-4">경기외곽</th><td class="px-2 py-3 text-right">47,000원</td><td class="px-3.5 py-3 text-right">47,000원</td></tr>
-                <tr><th scope="row" class="px-3.5 py-3 font-semibold sm:px-4">지방</th><td class="px-2 py-3 text-right">53,000원</td><td class="px-3.5 py-3 text-right">53,000원</td></tr>
-                <tr><th scope="row" class="px-3.5 py-3 font-semibold sm:px-4">제주</th><td colspan="2" class="px-3.5 py-3 text-right text-stone-500 sm:px-4">실비</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="mt-3 text-xs leading-5 text-stone-500">조기·축기 배송비이며 부가세는 별도입니다. 제주 지역은 실비로 안내합니다.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="border-y border-stone-200 bg-white" id="delivery">
-      <div class="mx-auto max-w-6xl px-5 py-12 lg:px-8 lg:py-16">
-        <div class="mb-7"><p class="text-xs font-extrabold tracking-[.16em] text-crimson">DELIVERY HOURS</p><h2 class="mt-2 text-2xl font-black tracking-tight sm:text-3xl">지역별 배송 마감 및 도착 안내</h2><p class="mt-2 text-sm text-stone-500">원활한 배송을 위해 지역별 주문 마감 시간을 확인해 주세요.</p></div>
-        <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="rounded-2xl bg-[#fbf9f7] p-5"><p class="text-xs font-bold text-stone-500">서울</p><p class="mt-2 text-xl font-black text-crimson">19시 마감</p><p class="mt-1 text-xs text-stone-500">접수 후 3시간 내 배송</p></div>
-          <div class="rounded-2xl bg-[#fbf9f7] p-5"><p class="text-xs font-bold text-stone-500">수도권</p><p class="mt-2 text-xl font-black text-crimson">18시 마감</p><p class="mt-1 text-xs text-stone-500">지역별 배송 일정 확인</p></div>
-          <div class="rounded-2xl bg-[#fbf9f7] p-5"><p class="text-xs font-bold text-stone-500">경기외곽</p><p class="mt-2 text-xl font-black text-crimson">16시 마감</p><p class="mt-1 text-xs text-stone-500">접수 시 도착 시간 확인</p></div>
-          <div class="rounded-2xl bg-[#fbf9f7] p-5"><p class="text-xs font-bold text-stone-500">지방</p><p class="mt-2 text-xl font-black text-crimson">20시 도착 기준</p><p class="mt-1 text-xs text-stone-500">지역별 접수 가능 시간 문의</p></div>
+      <div class="card products">
+        <div class="product">
+          <p class="product-title">3단 화환</p>
+          <div class="product-price"><span class="old-price">100,000원</span>80,000원<span class="discount">20% 할인</span></div>
+          <p class="subnote">동기회 할인가</p>
         </div>
-        <p class="mt-4 text-xs leading-5 text-stone-500">배송 마감과 도착 시간은 지역 및 현장 상황에 따라 달라질 수 있으니, 접수 시 주소와 희망 도착 시간을 함께 알려주세요.</p>
-      </div>
-    </section>
-
-    <section class="mx-auto max-w-6xl px-5 py-12 lg:px-8 lg:py-16" id="contact">
-      <div class="overflow-hidden rounded-3xl bg-crimson px-6 py-8 text-white sm:px-10 sm:py-10 lg:flex lg:items-center lg:justify-between lg:px-12">
-        <div><p class="text-xs font-bold tracking-[.16em] text-white/65">CONTACT & BUSINESS HOURS</p><h2 class="mt-2 text-2xl font-black sm:text-3xl">접수와 문의가 필요하신가요?</h2><p class="mt-3 max-w-xl text-sm leading-6 text-white/75">문자는 24시간 접수하며, 상담 응대는 매일 08:00–19:00입니다. 전화 문의는 업무 시간 중 연락해 주세요.</p></div>
-        <div class="mt-6 flex flex-col gap-3 sm:flex-row lg:mt-0 lg:shrink-0">
-          <a href="sms:01095700031" class="rounded-xl bg-white px-5 py-3.5 text-center text-sm font-extrabold text-crimson transition hover:bg-rose-50">문자 010-9570-0031</a>
-          <a href="tel:025811905" class="rounded-xl border border-white/35 px-5 py-3.5 text-center text-sm font-bold text-white transition hover:bg-white/10">전화 02-581-1905</a>
+        <div class="product">
+          <p class="product-title">근조바구니</p>
+          <div class="product-price">60,000원</div>
+          <p class="subnote">상품 금액</p>
         </div>
       </div>
-      <div class="mt-6 grid gap-4 sm:grid-cols-2">
-        <div class="rounded-2xl border border-stone-200 bg-white p-5"><p class="text-sm font-extrabold">문자 접수</p><p class="mt-1 text-sm text-stone-600">24시간 접수 가능</p><p class="mt-1 text-xs text-stone-500">응대 시간: 08:00–19:00</p></div>
-        <div class="rounded-2xl border border-stone-200 bg-white p-5"><p class="text-sm font-extrabold">전화 문의</p><p class="mt-1 text-sm text-stone-600">02-581-1905</p><p class="mt-1 text-xs text-stone-500">업무 시간: 08:00–19:00</p></div>
+
+      <div class="section-head" style="margin-top:28px">
+        <div><p class="section-kicker">DELIVERY FEE</p><h3>근조기 지역별 배송비</h3></div>
+        <p class="section-note">VAT 별도</p>
       </div>
+      <div class="card fees" role="table" aria-label="지역별 근조기 배송비">
+        <div class="fee-row fee-head" role="row"><span role="columnheader">배송 지역</span><span role="columnheader">조기</span><span role="columnheader">축기</span></div>
+        <div class="fee-row" role="row"><span class="fee-region" role="cell">in서울</span><span role="cell">30,000원</span><span role="cell">35,000원</span></div>
+        <div class="fee-row" role="row"><span class="fee-region" role="cell">서울근교</span><span role="cell">35,000원</span><span role="cell">43,000원</span></div>
+        <div class="fee-row" role="row"><span class="fee-region" role="cell">수도권</span><span role="cell">43,000원</span><span role="cell">47,000원</span></div>
+        <div class="fee-row" role="row"><span class="fee-region" role="cell">경기외곽</span><span role="cell">47,000원</span><span role="cell">47,000원</span></div>
+        <div class="fee-row" role="row"><span class="fee-region" role="cell">지방</span><span role="cell">53,000원</span><span role="cell">53,000원</span></div>
+        <div class="fee-row" role="row"><span class="fee-region" role="cell">제주</span><span role="cell" style="grid-column:span 2">실비</span></div>
+      </div>
+      <p class="fees-foot">배송비는 부가세 별도이며, 제주 지역은 실비로 안내합니다.</p>
+    </section>
+
+    <section class="section" id="delivery">
+      <div class="section-head">
+        <div><p class="section-kicker">DELIVERY HOURS</p><h2>배송 마감 및 도착 시간</h2></div>
+      </div>
+      <div class="card delivery">
+        <div class="delivery-item"><div class="delivery-area">서울</div><div class="delivery-time">19시 마감</div><div class="delivery-detail">접수 후 3시간 내</div></div>
+        <div class="delivery-item"><div class="delivery-area">수도권</div><div class="delivery-time">18시 마감</div></div>
+        <div class="delivery-item"><div class="delivery-area">경기외곽</div><div class="delivery-time">16시 마감</div></div>
+        <div class="delivery-item"><div class="delivery-area">지방</div><div class="delivery-time">20시 도착 기준</div></div>
+      </div>
+      <p class="notice">배송 가능 여부와 도착 시간은 지역 및 현장 상황에 따라 달라질 수 있습니다. 접수할 때 배송 주소와 희망 도착 시간을 알려주세요.</p>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><div><p class="section-kicker">SERVICE HOURS</p><h2>접수 및 응대 시간</h2></div></div>
+      <div class="card hours">
+        <div class="hours-item"><span class="label">문자 접수</span><div class="hours-main">24시간 접수 가능</div><p class="hours-sub">접수 문자는 언제든 보내실 수 있으며, 상담 응대는 08:00–19:00입니다.</p></div>
+        <div class="hours-item"><span class="label">전화 문의</span><div class="hours-main">02-581-1905</div><p class="hours-sub">문의 및 상담 시간: 08:00–19:00</p></div>
+      </div>
+      <p class="notice">평일·공휴일의 별도 응대 일정은 접수 시 문자로 확인해 주세요.</p>
     </section>
   </main>
 
-  <footer class="border-t border-stone-200 bg-white">
-    <div class="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-7 text-xs text-stone-500 sm:flex-row sm:items-center sm:justify-between lg:px-8">
-      <p class="font-semibold text-stone-700">고려대학교 컴퓨터학과 94동기회</p>
-      <p>근조기 운영 및 경조사 지원 안내 · 지오스테이션 연계</p>
-      <a href="#top" class="font-bold text-crimson hover:text-crimson-dark">맨 위로 ↑</a>
-    </div>
+  <footer>
+    <div class="wrap footer-inner"><span class="footer-name">고려대학교 컴퓨터학과 94동기회</span><span>근조기 운영 안내 · 지오스테이션 연계</span><a class="text-link" href="#top">맨 위로 ↑</a></div>
   </footer>
+  <div class="mobile-actions" aria-label="빠른 연락">
+    <a class="mobile-sms" href="sms:01095700031">문자 접수</a>
+    <a class="mobile-call" href="tel:025811905">전화 문의</a>
+  </div>
 </body>
 </html>
