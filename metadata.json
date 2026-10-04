@@ -1,8 +1,0 @@
-{
-  "name": "KUCS 94 경조사 진행 절차 포털",
-  "description": "고려대학교 컴퓨터학과 94학번 및 동문을 위한 경조사(장례·조사, 결혼·경사, 수연, 출산 등) 진행 절차, 조문/하객 예절, 봉투 서식, 모바일 알림 생성기 및 동문회 지원 규정 안내 시스템",
-  "requestFramePermissions": [],
-  "majorCapabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
-  ]
-}
