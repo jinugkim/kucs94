@@ -20,13 +20,15 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
           </p>
           <div className="flex items-center gap-2 text-neutral-500 pt-1">
             <span>GitHub:</span>
-            <button
-              onClick={() => onSelectTab('github')}
+            <a
+              href="https://github.com/jinugkim/kucs94"
+              target="_blank"
+              rel="noreferrer"
               className="font-mono text-amber-400 hover:underline flex items-center gap-1 cursor-pointer"
             >
               <GitBranch className="w-3 h-3" />
-              <span>kucs94</span>
-            </button>
+              <span>jinugkim/kucs94</span>
+            </a>
           </div>
         </div>
 

@@ -88,18 +88,16 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         {/* Zone 3: Primary actions */}
         <div className="flex items-center gap-3">
-          <button
-            onClick={() => setActiveTab('github')}
-            className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors border flex items-center gap-1.5 whitespace-nowrap cursor-pointer ${
-              activeTab === 'github'
-                ? 'bg-neutral-900 text-white border-neutral-900'
-                : 'text-neutral-700 border-neutral-300 hover:bg-neutral-100'
-            }`}
-            title="GitHub kucs94 리포지토리 연동"
+          <a
+            href="https://github.com/jinugkim/kucs94"
+            target="_blank"
+            rel="noreferrer"
+            className="px-3 py-1.5 text-xs font-medium rounded-lg transition-colors border text-neutral-700 border-neutral-300 hover:bg-neutral-100 flex items-center gap-1.5 whitespace-nowrap cursor-pointer"
+            title="GitHub jinugkim/kucs94 리포지토리 바로가기"
           >
             <GitBranch className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">kucs94</span>
-          </button>
+            <span className="hidden sm:inline">jinugkim/kucs94</span>
+          </a>
 
           <button
             onClick={onOpenRegisterModal}

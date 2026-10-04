@@ -49,7 +49,7 @@
 
 ```bash
 # 리포지토리 클론
-git clone https://github.com/<your-username>/kucs94.git
+git clone https://github.com/jinugkim/kucs94.git
 cd kucs94
 
 # 의존성 설치
@@ -74,16 +74,15 @@ npm run dev
 
 ## 📦 GitHub 저장소 연동 가이드
 
-로컬 변경사항을 본인의 GitHub `kucs94` 원격 저장소에 푸시하려면:
+현재 원격 저장소(`origin`)가 `https://github.com/jinugkim/kucs94.git` 로 설정되어 있습니다.
 
 ```bash
-# 1. GitHub CLI 사용 시
-gh repo create kucs94 --public --source=. --remote=origin --push
-
-# 2. 또는 기존 GitHub 저장소 URL에 연결 시
-git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/kucs94.git
+# 1. GitHub 개인 액세스 토큰(PAT) 또는 SSH 인증 후 푸시
 git branch -M main
 git push -u origin main
+
+# 2. 또는 GitHub CLI 사용 시
+gh repo create kucs94 --public --source=. --remote=origin --push
 ```
 
 ---
